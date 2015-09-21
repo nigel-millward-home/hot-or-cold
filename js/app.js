@@ -44,30 +44,40 @@ $(document).ready(function(){
 	// Response to guess
     function submitAnswer(diff)
     {
-		
 		if(diff == 0)
 		{
-			$('#feedback').text("you are correct");
+			$('#feedback').text('Well Done! You got it right. You are so clever');
+			
 		}
-		if(diff > 0 && diff <= 10)
+
+		if(diff > 0 && diff < 5)
+		{
+			$('#feedback').text("You are Kerry Millward hot!");
+		}
+
+		if(diff >= 5 && diff < 10)
 		{
 			$('#feedback').text("You are very hot!");
 		}
-		if(diff => 11 && diff <= 20)
+		if(diff >=10 && diff < 20)
 		{
 			$('#feedback').text("You are hot!");
 		}
-		if(diff => 21 && diff <= 30)
+		if(diff >= 21 && diff < 30)
 		{
 			$('#feedback').text("You are warm");
 		}
-		if(diff => 31 && diff <= 50)
+		if(diff >= 31 && diff < 50)
 		{
 			$('#feedback').text("You are cold");
 		}
-		if(diff > 50)
+		if(diff >= 50 && diff < 70)
 		{
 			$('#feedback').text("You are ice cold");
+		}
+		if(diff >= 70 && diff < 99)
+		{
+			$('#feedback').text("That was awful! Why not start with number 50 :-)");
 		}
 	}
 
@@ -82,13 +92,9 @@ $(document).ready(function(){
 			$('.guessBox').append('<li>' + userGuess + '</li>');
 			guessCount();
 			submitAnswer(diff);
-			
-			console.log('userGuess: ' + userGuess);
-			console.log('random number: ' + rand);
-			console.log('diff: ' + diff);
-			console.log('submit answer: ' + submitAnswer(diff));
 			$('#userGuess').val("");
-		} else {
+		} else 
+		{
 			alert('Type only numbers between 1 and 100.');
       		$('#userGuess').val("");
 		}
