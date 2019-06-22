@@ -46,13 +46,13 @@ $(document).ready(function(){
     {
 		if(diff == 0)
 		{
-			$('#feedback').text('Well Done! You got it right. You are so clever');
+			$('#feedback').text('Well Done! You got it right!');
 			
 		}
 
 		if(diff > 0 && diff < 5)
 		{
-			$('#feedback').text("You are Kerry Millward hot!");
+			$('#feedback').text("You are volcanic hot!");
 		}
 
 		if(diff >= 5 && diff < 10)
@@ -77,7 +77,7 @@ $(document).ready(function(){
 		}
 		if(diff >= 70 && diff < 99)
 		{
-			$('#feedback').text("That was awful! Why not start with number 50 :-)");
+			$('#feedback').text("That was Pluto cold");
 		}
 	}
 
